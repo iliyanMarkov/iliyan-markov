@@ -12,7 +12,7 @@ const Home = () => {
 		<section className="home section grid" id="home" data-path="/#home">
 			<div className="home__img-logo-wrapper">
 				<img
-					src={"src/assets/Profile-Smiling-Black.jpg"}
+					src={Profile}
 					alt="Iliyan Markov profile image"
 					className="home__img"
 				/>
