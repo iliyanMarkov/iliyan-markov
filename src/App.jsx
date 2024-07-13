@@ -11,7 +11,7 @@ import Contact from "./pages/contact/Contact";
 function App() {
 	return (
 		<div className="App">
-			<BrowserRouter>
+			<BrowserRouter basename="/iliyan-markov/">
 				<Navbar />
 				<Themes />
 				<Home />
