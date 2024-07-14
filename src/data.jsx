@@ -55,7 +55,7 @@ export const calculateAge = (year, month, day) => {
 		age--;
 	}
 
-	return age + " Years";
+	return age + " y/o";
 };
 
 export const links = [
