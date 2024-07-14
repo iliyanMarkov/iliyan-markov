@@ -5,4 +5,11 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
 	plugins: [react()],
 	base: "/iliyan-markov/",
+	server: {
+		open: true,
+		hmr: {
+			protocol: "ws",
+			host: "localhost",
+		},
+	},
 });
