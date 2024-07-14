@@ -125,7 +125,7 @@
 	content: "";
 	position: absolute;
 	inset-block: 0;
-	left: 20px;
+	left: 18px;
 	border-left: 1px solid var(--border-color);
 }
 
