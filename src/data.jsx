@@ -173,7 +173,7 @@ export const resume = [
 		category: "experience",
 		icon: <FaBriefcase />,
 		year: "2019 - 2021",
-		title: "React.js Developer <span> Sugarhigh Studios </span>",
+		title: "React.js Developer <span> Sugarhigh Studio </span>",
 		desc: [
 			"Developing and maintaining web applications using React.js.",
 			"Collaborating with the designers, and the clients to create user-friendly websites.",
