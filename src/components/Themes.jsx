@@ -7,7 +7,7 @@ import { LuSunMedium, LuMoon } from "react-icons/lu";
 
 import "./themes.css";
 
-const getStorageColor = () => {
+export const getStorageColor = () => {
 	let color = "hsl(252, 35%, 51%)";
 	if (localStorage.getItem("color")) {
 		color = localStorage.getItem("color");
@@ -16,7 +16,7 @@ const getStorageColor = () => {
 	return color;
 };
 
-const getStorageTheme = () => {
+export const getStorageTheme = () => {
 	let theme = "dark-theme";
 	if (localStorage.getItem("theme")) {
 		theme = localStorage.getItem("theme");
