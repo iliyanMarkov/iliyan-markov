@@ -7,8 +7,22 @@ import Skills from "../../components/Skills";
 import { resume } from "../../data";
 import ResumeItem from "../../components/ResumeItem";
 import "./about.css";
+import PDFDocument from "../../components/PDFDocument";
+import { pdf } from "@react-pdf/renderer";
 
 const About = () => {
+	const handleDownload = async () => {
+		const doc = <PDFDocument />;
+		const asPdf = pdf([]);
+		asPdf.updateContainer(doc);
+		const blob = await asPdf.toBlob();
+		const url = URL.createObjectURL(blob);
+		const a = document.createElement("a");
+		a.href = url;
+		a.download = "iliyan-markov-cv.pdf";
+		a.click();
+	};
+
 	return (
 		<main className="section container" id="about" data-path="/#about">
 			<section className="about">
@@ -25,10 +39,9 @@ const About = () => {
 						</ul>
 
 						<a
-							href={CV}
-							download=""
 							className="button"
 							data-path="/#about"
+							onClick={handleDownload}
 						>
 							Download Cv
 							<span className="button__icon">
