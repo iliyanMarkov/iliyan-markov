@@ -6,6 +6,7 @@ import {
 	Document,
 	StyleSheet,
 	Image,
+	Link,
 } from "@react-pdf/renderer";
 import { getStorageColor, getStorageTheme } from "./Themes";
 import Profile from "../assets/Profile-Smiling-Black.jpg";
@@ -121,6 +122,12 @@ const styles = ({ pageTextColor, theme }) =>
 		listItemText: {
 			color: getSubTextColor(theme),
 			fontSize: 9,
+		},
+		websiteLink: {
+			color: getSubTextColor(theme),
+			fontSize: 9,
+			textDecoration: "none",
+			cursor: "pointer",
 		},
 		font: {
 			color: getSubTextColor(theme),
@@ -840,15 +847,16 @@ const PDFDocument = () => {
 								>
 									Website
 								</Text>
-								<Text
-									style={
-										styles({
-											pageTextColor,
-											theme,
-										}).font
-									}
-								>
-									https://iliyanmarkov.github.io/iliyan-markov/
+								<Text>
+									<Link
+										src="https://iliyanmarkov.github.io/iliyan-markov/"
+										style={
+											styles({ pageTextColor, theme })
+												.websiteLink
+										}
+									>
+										https://iliyanmarkov.github.io/iliyan-markov/
+									</Link>
 								</Text>
 							</View>
 						</View>
