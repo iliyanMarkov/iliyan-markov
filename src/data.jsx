@@ -170,21 +170,30 @@ export const stats = [
 export const resume = [
 	{
 		id: 1,
-		category: "experience",
 		icon: <FaBriefcase />,
-		year: "2019 - 2021",
-		title: "React.js Developer <span> Sugarhigh Studio </span>",
+		year: "2023 - PRESENT",
+		title: "Front-End Developer <span> Law Business Research </span>",
 		desc: [
-			"Developing and maintaining web applications using React.js.",
-			"Collaborating with the designers, and the clients to create user-friendly websites.",
-			"Implementing responsive design and ensuring cross-browser compatibility.",
-			"Actively contributing to the planning and strategy phases of projects. This involves advocating for best practices in web development, accessibility, and SEO to ensure that our projects not only look great but also rank well and are accessible to all users. ",
+			"Developing and maintaining web applications using React.js and other related technologies.",
+			"Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+			"Developing and maintaining multiple projects and company businesses.",
+			"Collaborating closely with UX/UI designers and back-end developers, translating design concepts and requirements into fully realized features. ",
 		],
 	},
-
 	{
 		id: 2,
-		category: "experience",
+		icon: <FaBriefcase />,
+		year: "2022 - 2023",
+		title: "Front-End Developer <span> All Front </span>",
+		desc: [
+			"Developing and maintaining web applications using React.js, Angular, GraphQL and other related technologies.",
+			"Collaborating with cross-functional teams including designers, product managers, clients, other companies and other developers to create high-quality products.",
+			"Helping multiple startup companies to efficiently begin their websites, apps and businesses.",
+			"Participating in code reviews and providing constructive feedback to other developers.",
+		],
+	},
+	{
+		id: 3,
 		icon: <FaBriefcase />,
 		year: "2021 - 2022",
 		title: "Web Developer <span> Medlink Students </span>",
@@ -197,29 +206,15 @@ export const resume = [
 	},
 
 	{
-		id: 3,
-		category: "education",
-		icon: <FaBriefcase />,
-		year: "2022 - 2023",
-		title: "Front-End Developer <span> All Front </span>",
-		desc: [
-			"Developing and maintaining web applications using React.js, Angular, GraphQL and other related technologies.",
-			"Collaborating with cross-functional teams including designers, product managers, clients, other companies and other developers to create high-quality products.",
-			"Helping multiple startup companies to efficiently begin their websites, apps and businesses.",
-			"Participating in code reviews and providing constructive feedback to other developers.",
-		],
-	},
-	{
 		id: 4,
-		category: "education",
 		icon: <FaBriefcase />,
-		year: "2023 - PRESENT",
-		title: "Front-End Developer <span> Law Business Research </span>",
+		year: "2019 - 2021",
+		title: "React.js Developer <span> Sugarhigh Studio </span>",
 		desc: [
-			"Developing and maintaining web applications using React.js and other related technologies.",
-			"Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-			"Developing and maintaining multiple projects and company businesses.",
-			"Collaborating closely with UX/UI designers and back-end developers, translating design concepts and requirements into fully realized features. ",
+			"Developing and maintaining web applications using React.js.",
+			"Collaborating with the designers, and the clients to create user-friendly websites.",
+			"Implementing responsive design and ensuring cross-browser compatibility.",
+			"Actively contributing to the planning and strategy phases of projects. This involves advocating for best practices in web development, accessibility, and SEO to ensure that our projects not only look great but also rank well and are accessible to all users. ",
 		],
 	},
 ];
