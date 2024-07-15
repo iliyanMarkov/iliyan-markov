@@ -9,9 +9,18 @@ import {
 } from "@react-pdf/renderer";
 import { getStorageColor, getStorageTheme } from "./Themes";
 import Profile from "../assets/Profile-Smiling-Black.jpg";
+import { BackgroundPattern } from "./BackgroundPattern";
 
 const getBodyColor = (theme) => {
-	return theme === "dark-theme" ? "hsl(0, 0%, 7%)" : "hsl(0, 0%, 100%)";
+	return theme === "dark-theme" ? "hsl(0, 0%, 7%)" : "transparent";
+};
+
+const getSubTextColor = (theme, isOnlyDark) => {
+	return isOnlyDark
+		? "#3d3e3f"
+		: theme === "dark-theme"
+		? "#777a7b"
+		: "#3d3e3f";
 };
 
 const getBodyTextColor = (theme) => {
@@ -21,7 +30,16 @@ const getBodyTextColor = (theme) => {
 const styles = ({ pageTextColor, theme }) =>
 	StyleSheet.create({
 		page: {
-			backgroundColor: "white",
+			backgroundColor: "transparent",
+			position: "relative",
+		},
+		backgroundWrapper: {
+			width: "100%",
+			height: "100%",
+			top: 0,
+			left: "-50px",
+			position: "absolute",
+			opacity: "0.5",
 		},
 		content: {
 			display: "flex",
@@ -61,7 +79,6 @@ const styles = ({ pageTextColor, theme }) =>
 			letterSpacing: 0.05,
 		},
 		contTitleLeft: {
-			backgroundColor: getBodyColor(theme),
 			paddingBottom: 20,
 		},
 		hrLeft: {
@@ -72,7 +89,6 @@ const styles = ({ pageTextColor, theme }) =>
 		contContentLeft: {
 			paddingTop: 10,
 			paddingBottom: 0,
-			backgroundColor: getBodyColor(theme),
 			width: 120,
 		},
 		fontTitleLeft: {
@@ -98,16 +114,16 @@ const styles = ({ pageTextColor, theme }) =>
 			width: 3,
 			height: 3,
 			borderRadius: "50%",
-			backgroundColor: "#777a7b",
+			backgroundColor: getSubTextColor(theme),
 			marginRight: 5,
 			marginLeft: 5,
 		},
 		listItemText: {
-			color: "#777a7b",
+			color: getSubTextColor(theme),
 			fontSize: 9,
 		},
 		font: {
-			color: "#777a7b",
+			color: getSubTextColor(theme),
 			fontSize: 9,
 		},
 		rightListWrapper: {
@@ -139,7 +155,7 @@ const styles = ({ pageTextColor, theme }) =>
 		},
 
 		fontSubtitleRight: {
-			color: getBodyColor(theme),
+			color: "hsl(0, 0%, 7%)",
 			fontWeight: "bold",
 			fontSize: 10,
 			letterSpacing: 0.05,
@@ -156,12 +172,12 @@ const styles = ({ pageTextColor, theme }) =>
 			width: 3,
 			height: 3,
 			borderRadius: "50%",
-			backgroundColor: "#777a7b",
+			backgroundColor: getSubTextColor(theme, true),
 			marginRight: 5,
 			marginLeft: 5,
 		},
 		rightListItemText: {
-			color: "#777a7b",
+			color: getSubTextColor(theme, true),
 			fontSize: 9,
 		},
 	});
@@ -194,6 +210,17 @@ const PDFDocument = () => {
 					}).page
 				}
 			>
+				<View
+					style={
+						styles({
+							pageTextColor,
+							theme,
+						}).backgroundWrapper
+					}
+				>
+					<BackgroundPattern patternColor={pageTextColor} />
+				</View>
+
 				<View
 					style={
 						styles({
