@@ -172,7 +172,7 @@ export const resume = [
 		id: 1,
 		icon: <FaBriefcase />,
 		year: "2023 - PRESENT",
-		title: "Front-End Developer <span> Law Business Research </span>",
+		title: "Senior Front-End Developer <span> Law Business Research </span>",
 		desc: [
 			"Developing and maintaining web applications using React.js and other related technologies.",
 			"Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",

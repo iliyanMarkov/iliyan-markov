@@ -911,7 +911,7 @@ const PDFDocument = () => {
 										}).fontSubtitleRight
 									}
 								>
-									2023 - Present "Front-End Developer"
+									2023 - Present "Senior Front-End Developer"
 								</Text>
 								<View
 									style={
